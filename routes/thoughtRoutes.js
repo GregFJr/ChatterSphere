@@ -4,9 +4,17 @@ const thoughtController = require('../controllers/thoughtController');
 
 // Routes for thoughts
 router.get('/', thoughtController.getAllThoughts);
+
+// Get a single thought by ID
 router.get('/:id', thoughtController.getThoughtById);
+
+//Create a new thought
 router.post('/', thoughtController.createThought);
+
+//Update a thought by ID
 router.put('/:id', thoughtController.updateThought);
+
+// Delete a thought by ID
 router.delete('/:id', thoughtController.deleteThought);
 
 // Routes for reactions
