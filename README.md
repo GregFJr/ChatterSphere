@@ -16,3 +16,7 @@ ChatterSphere API is a robust backend solution for a social networking web appli
 To set up ChatterSphere API locally:
 
 1. Clone the repository:
+2. Navigate to the project directory and install dependencies:
+3. Start the server:
+
+
