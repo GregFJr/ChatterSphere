@@ -11,12 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', routes);
 
-// Test route
+// Just a test route
 app.get('/test', (req, res) => {
     res.json({ message: "Hello from test" });
   });
 
-// TODO: Define routes here
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
