@@ -61,8 +61,6 @@ exports.deleteUser = async (req, res) => {
     if (!user) {
       res.status(404).send('No user found with this ID');
     } else {
-      // Bonus: Delete the user's associated thoughts
-      // You need to implement this part based on your Thought model
 
       res.json({ message: 'User successfully deleted' });
     }
