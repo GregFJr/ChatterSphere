@@ -73,8 +73,23 @@ exports.deleteUser = async (req, res) => {
 
 // Add a friend
 exports.addFriend = async (req, res) => {
-  // ... (as previously shown)
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.userId,
+      { $addToSet: { friends: req.params.friendId } }, 
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'No user found with this ID' });
+    }
+
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
+
 
 // Remove a friend
 exports.removeFriend = async (req, res) => {
