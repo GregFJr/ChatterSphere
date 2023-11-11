@@ -61,7 +61,7 @@ exports.deleteThought = async (req, res) => {
     if (!thought) {
       res.status(404).send('No thought found with this ID');
     } else {
-      // You may also want to remove this thought from the user's `thoughts` array.
+      
       await User.findByIdAndUpdate(thought.userId, { $pull: { thoughts: thought._id } });
       res.json({ message: 'Thought successfully deleted' });
     }
