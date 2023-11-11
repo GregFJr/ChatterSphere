@@ -59,6 +59,10 @@ Use API testing tools like Insomnia or Postman to interact with the API once the
 - MongoDB
 - Mongoose
 
+## Example Screenshot
+![ChatterSphere](./screenshot/ChatterSphere.png)
+
+
 ## License
 
 This project is unlicensed.
